@@ -11,9 +11,14 @@ object AppConstant {
     //HeART Auth_EndPoints
     const val HEART_END_POINT_SINGUP = "signup"
     const val HEART_END_POINT_LOGIN = "login"
-    const val HEART_END_POINT_GALLERY = "gallery"
     const val HEART_END_POINT_EVENTS = "events"
-    const val HEART_BASE_URL = "https://heart-backend.onrender.com/api/"
+    const val HEART_END_POINT_DEALS = "deals"
+    const val HEART_BASE_URL = "https://heart-backend-tfru.onrender.com/api/"
+    const val HEART_END_POINT_GALLERY = "gallery"
+    const val HEART_END_POINT_ADVERTISMENT = "advertisements"
+    const val HEART_END_POINT_VISITED = "visited"
+    const val HEART_END_POINT_NEARBYPLACES = "nearbyPlaces"
+
 
 
 
