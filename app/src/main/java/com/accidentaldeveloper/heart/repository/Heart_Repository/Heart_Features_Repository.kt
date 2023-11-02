@@ -9,5 +9,7 @@ class Heart_Features_Repository @Inject constructor(private val heartService:Hea
 
     suspend fun getDeals() = heartService.deals()
 
-    suspend fun getVisited() = heartService.Gallery()
+    suspend fun getAdvertisment() = heartService.advertisments()
+
+
 }

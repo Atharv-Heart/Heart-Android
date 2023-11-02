@@ -15,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class Visited_Places : AppCompatActivity() {
     private lateinit var webView: WebView
     lateinit var binding:ActivityVisitedPlacesBinding
-
+    private val viewmodel:EventsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,9 @@ class Visited_Places : AppCompatActivity() {
         setContentView(view)
 
         //events data
-
+         viewmodel.liveData.observe(this,{
+             Log.d("events", "onCreate: ${it} ")
+         })
 
 
     }

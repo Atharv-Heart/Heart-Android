@@ -13,6 +13,7 @@ import com.accidentaldeveloper.heart.Gallery
 import com.accidentaldeveloper.heart.Visited_Places
 import com.accidentaldeveloper.heart.databinding.FragmentHomeBinding
 import com.accidentaldeveloper.heart.models.mascot_model.mascot_request
+import com.accidentaldeveloper.heart.viewmodel.HeartViewModel.AdvertimentViewModel
 import com.accidentaldeveloper.heart.viewmodel.Mascot_View_Model
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Locale
@@ -22,6 +23,7 @@ class home_fragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
 
     private val viewmodel: Mascot_View_Model by viewModels()
+    private val viewmodel_Ads: AdvertimentViewModel by viewModels()
 
     lateinit var tts: TextToSpeech
     lateinit var speak: String
@@ -44,6 +46,7 @@ class home_fragment : Fragment() {
             val intent = Intent(context, Visited_Places::class.java)
             startActivity(intent)
         }
+
         viewmodel.livedata.observe(viewLifecycleOwner, {
             Log.d("aajana", "onCreate: ${it}")
             speak = it.response
@@ -60,6 +63,11 @@ class home_fragment : Fragment() {
             })
         }
 
+
+        //ads_viewmodel
+        viewmodel_Ads.advertismentLiveData.observe(viewLifecycleOwner,{
+            Log.d("ads", "onCreateView: ${it}")
+        })
         return binding.root
     }
 
