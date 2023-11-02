@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/ar_fragment">
+
+    <fragment
+        android:id="@+id/ar_fragment"
+        android:name="com.accidentaldeveloper.heart.ui.ar_fragment"
+        android:label="fragment_ar_fragment"
+        tools:layout="@layout/fragment_ar_fragment" />
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.accidentaldeveloper.heart.ui.home_fragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/mission_fragment"
+        android:name="com.accidentaldeveloper.heart.ui.mission_fragment"
+        android:label="fragment_mission_fragment"
+        tools:layout="@layout/fragment_mission_fragment" />
+    <fragment
+        android:id="@+id/deals_fragments"
+        android:name="com.accidentaldeveloper.heart.ui.deals_fragments"
+        android:label="fragment_deals_fragments"
+        tools:layout="@layout/fragment_deals_fragments" />
+    <fragment
+        android:id="@+id/events_fragment"
+        android:name="com.accidentaldeveloper.heart.ui.events_fragment"
+        android:label="fragment_events_fragment"
+        tools:layout="@layout/fragment_events_fragment" />
+</navigation>

@@ -1,0 +1,5 @@
+<resources>
+    <style name="circular">
+        <item name="cornerSize">90%</item>
+    </style>
+</resources>

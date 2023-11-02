@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/background"
+    tools:context=".ui.home_fragment">
+
+    <!-- constraintlayout for enitre app  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <!-- ScrollView for making the app kinda responsive -->
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="scrollView"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- image corosuol -->
+                <ViewFlipper
+                    android:id="@+id/viewFlipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:autoStart="true"
+                    android:flipInterval="4000"
+                    android:inAnimation="@android:anim/fade_in"
+                    android:outAnimation="@android:anim/fade_out"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ad_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ad_1" />
+
+                    <ImageView
+                        android:id="@+id/ad_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ad_2" />
+
+                    <ImageView
+                        android:id="@+id/ad_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ad_3" />
+
+                    <ImageView
+                        android:id="@+id/ad_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ad_4" />
+
+                </ViewFlipper>
+
+                <!-- recycler view for nearby palace  -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Nearby_Place_Rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewFlipper" />
+
+                <!-- it has buttons and image view -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Nearby_Place_Rv">
+
+                    <!--image view gallery-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/gallery"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/gallery" />
+
+                        <ImageView
+                            android:id="@+id/visited"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/visited_places" />
+
+                        <ImageView
+                            android:id="@+id/scoialmeida"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/gallery" />
+
+                        <ImageView
+                            android:id="@+id/wallet"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/gallery" />
+                    </LinearLayout>
+
+                    <!--image view gallery-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/filters"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/gallery" />
+
+                        <ImageView
+                            android:id="@+id/contribute"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/gallery" />
+
+                        <ImageView
+
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/gallery" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/gallery" />
+                    </LinearLayout>
+
+                    <!--Buttons for earn more coins. etc....-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="5dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/referandwin"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:text="Refer Win" />
+
+                        <Button
+                            android:id="@+id/deals"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:text="Deals" />
+
+                        <Button
+                            android:id="@+id/morecoins"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="1"
+                            android:text="More Coins" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <!-- chat bot mascot ....-->
+        <ImageView
+            android:id="@+id/drag_img_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/chatbot"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</FrameLayout>

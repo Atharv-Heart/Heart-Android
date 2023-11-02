@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/events_navigation"
+    app:startDestination="@id/all_Events_fragments">
+
+    <fragment
+        android:id="@+id/all_Events_fragments"
+        android:name="com.accidentaldeveloper.heart.ui.All_Events_fragments"
+        android:label="fragment_all__events_fragments"
+        tools:layout="@layout/fragment_all__events_fragments" >
+        <action
+            android:id="@+id/action_all_Events_fragments_to_saved_Events_Fragments"
+            app:destination="@id/saved_Events_Fragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/saved_Events_Fragments"
+        android:name="com.accidentaldeveloper.heart.ui.Saved_Events_Fragments"
+        android:label="fragment_saved__events__fragments"
+        tools:layout="@layout/fragment_saved__events__fragments" >
+        <action
+            android:id="@+id/action_saved_Events_Fragments_to_all_Events_fragments"
+            app:destination="@id/all_Events_fragments"
+            app:popUpTo="@id/all_Events_fragments"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

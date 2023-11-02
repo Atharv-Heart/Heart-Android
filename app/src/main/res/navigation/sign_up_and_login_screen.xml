@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up_and_login_screen"
+    app:startDestination="@id/logIn_Fragment">
+
+    <fragment
+        android:id="@+id/logIn_Fragment"
+        android:name="com.accidentaldeveloper.heart.ui.LogIn_Fragment"
+        android:label="fragment_log_in_"
+        tools:layout="@layout/fragment_log_in_" >
+        <action
+            android:id="@+id/action_logIn_Fragment_to_register_Fragment"
+            app:destination="@id/register_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_Fragment"
+        android:name="com.accidentaldeveloper.heart.ui.Register_Fragment"
+        android:label="fragment_register_"
+        tools:layout="@layout/fragment_register_" >
+        <action
+            android:id="@+id/action_register_Fragment_to_logIn_Fragment"
+            app:destination="@id/logIn_Fragment"
+            app:popUpTo="@id/logIn_Fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
