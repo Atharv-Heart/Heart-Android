@@ -9,6 +9,7 @@ import com.accidentaldeveloper.heart.helper.NetworkResult
 import com.accidentaldeveloper.heart.models.heart_auth_model.login_response
 import com.accidentaldeveloper.heart.models.heart_auth_model.sing_up_response
 import com.accidentaldeveloper.heart.models.heart_auth_model.singup_and_login_request
+import com.accidentaldeveloper.heart.repository.Heart_Repository.Heart_Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

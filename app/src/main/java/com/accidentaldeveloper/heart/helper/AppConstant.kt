@@ -12,7 +12,9 @@ object AppConstant {
     const val HEART_END_POINT_SINGUP = "signup"
     const val HEART_END_POINT_LOGIN = "login"
     const val HEART_END_POINT_GALLERY = "gallery"
+    const val HEART_END_POINT_EVENTS = "events"
     const val HEART_BASE_URL = "https://heart-backend.onrender.com/api/"
+
 
 
     //token key

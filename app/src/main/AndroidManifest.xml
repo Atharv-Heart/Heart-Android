@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
+  <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".helper.Myapplication"
@@ -31,7 +31,9 @@
             android:exported="false" />
         <activity
             android:name=".Visited_Places"
-            android:exported="false" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".Gallery"
             android:exported="false" />
@@ -39,14 +41,11 @@
             android:name=".Splash_Screen"
             android:exported="true"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
         <activity
             android:name=".MainActivity"

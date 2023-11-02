@@ -2,6 +2,7 @@ package com.accidentaldeveloper.heart.di
 
 import com.accidentaldeveloper.heart.api.ApiService
 import com.accidentaldeveloper.heart.api.Heart_Auth_Service
+import com.accidentaldeveloper.heart.api.Heart_Featuers_Service
 import com.accidentaldeveloper.heart.helper.AppConstant
 import dagger.Module
 import dagger.Provides
@@ -46,4 +47,18 @@ object AppModule {
         )
         .build()
         .create(Heart_Auth_Service::class.java)
+
+    @Provides
+    fun provide_Provide_Retrofit_Instance_For_HeART_Features() = Retrofit
+        .Builder()
+        .baseUrl(AppConstant.HEART_BASE_URL)
+        .addConverterFactory(GsonConverterFactory.create())
+        .client(
+            OkHttpClient.Builder()
+                .readTimeout(60, TimeUnit.SECONDS) // Increase the read timeout
+                .connectTimeout(60, TimeUnit.SECONDS)  // Increase the connect timeout
+                .build()
+        )
+        .build()
+        .create(Heart_Featuers_Service::class.java)
 }

@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.accidentaldeveloper.heart.models.mascot_model.mascot_request
 import com.accidentaldeveloper.heart.models.mascot_model.mascot_response
+import com.accidentaldeveloper.heart.repository.mascot_repository.Mascot_Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
