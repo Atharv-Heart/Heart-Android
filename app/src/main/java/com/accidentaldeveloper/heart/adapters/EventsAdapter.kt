@@ -1,17 +1,12 @@
 package com.accidentaldeveloper.heart.adapters
 
-import android.app.Activity
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.heart.R
 import com.accidentaldeveloper.heart.models.heart_events_model.events_responseItem
-import com.google.android.material.imageview.ShapeableImageView
-import com.squareup.picasso.Picasso
 
 class MyAdapter(private val eventsArrayList : List<events_responseItem>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

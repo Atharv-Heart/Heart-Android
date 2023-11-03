@@ -27,6 +27,7 @@ class home_fragment : Fragment() {
 
     lateinit var tts: TextToSpeech
     lateinit var speak: String
+    private var counter:Int = 0
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -47,6 +48,21 @@ class home_fragment : Fragment() {
             startActivity(intent)
         }
 
+        //onClickListner for refer and win
+        binding.referandwin.setOnClickListener {
+            val sharingIntent = Intent(Intent.ACTION_SEND)
+            sharingIntent.type = "text/plain"
+            val shareBody = "Download now to restore historical monuments, play games, complete missions, and earn 100 coins for your efforts."+" https://deluxe-puffpuff-72d8f1.netlify.app/ "
+            sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here")
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
+            startActivity(Intent.createChooser(sharingIntent, "Share via"))
+        }
+
+        //more coins
+        binding.morecoins.setOnClickListener {
+
+        }
+
         viewmodel.livedata.observe(viewLifecycleOwner, {
             Log.d("aajana", "onCreate: ${it}")
             speak = it.response
@@ -59,7 +75,20 @@ class home_fragment : Fragment() {
             tts = TextToSpeech(context, TextToSpeech.OnInitListener {
                 tts.language = Locale.ENGLISH
                 tts.setPitch(1f)
-                tts.speak(speak, TextToSpeech.QUEUE_ADD, null)
+                if(counter==0){
+                    tts.speak("REVA University Rangasthala: State-of-the-art amphitheater for all types of events.", TextToSpeech.QUEUE_ADD, null)
+                    counter++;
+                }else if(counter==1){
+                    tts.stop()
+                    tts.speak("Rangasthala: Where culture, commerce, and community converge", TextToSpeech.QUEUE_ADD, null)
+                    counter++;
+                }else if(counter==2){
+                    tts.stop()
+                    tts.speak("Rangasthala: The heart of REVA University, beating with the rhythm of life", TextToSpeech.QUEUE_ADD, null)
+                    counter=0;
+                }
+
+
             })
         }
 
