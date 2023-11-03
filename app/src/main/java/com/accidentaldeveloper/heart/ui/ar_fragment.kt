@@ -14,10 +14,44 @@ class ar_fragment : Fragment() {
     lateinit var binding: FragmentArFragmentBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
        binding = FragmentArFragmentBinding.inflate(layoutInflater,container,false)
-        binding.imageView2.setOnClickListener {
+        binding.im1.setOnClickListener {
             val i = Intent()
             i.action = Intent.ACTION_VIEW
-            i.setClassName("com.DefaultCompany.ProtoTypical","com.unity3d.player.UnityPlayerActivity")
+            i.setClassName("com.accidentaldeveloper.ar","com.accidentaldeveloper.ar.MainActivity")
+            i.putExtra("vinit","1")
+
+
+            startActivity(i)
+
+        }
+
+        binding.im2.setOnClickListener {
+            val i = Intent()
+            i.action = Intent.ACTION_VIEW
+            i.setClassName("com.accidentaldeveloper.ar","com.accidentaldeveloper.ar.MainActivity")
+            i.putExtra("vinit","2")
+
+
+            startActivity(i)
+
+        }
+
+        binding.im3.setOnClickListener {
+            val i = Intent()
+            i.action = Intent.ACTION_VIEW
+            i.setClassName("com.accidentaldeveloper.ar","com.accidentaldeveloper.ar.MainActivity")
+            i.putExtra("vinit","3")
+
+
+            startActivity(i)
+
+        }
+
+        binding.im4.setOnClickListener {
+            val i = Intent()
+            i.action = Intent.ACTION_VIEW
+            i.setClassName("com.accidentaldeveloper.ar","com.accidentaldeveloper.ar.MainActivity")
+            i.putExtra("vinit","4")
 
 
             startActivity(i)

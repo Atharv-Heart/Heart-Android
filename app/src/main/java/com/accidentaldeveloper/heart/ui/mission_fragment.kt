@@ -21,7 +21,7 @@ class mission_fragment : Fragment() {
 
         val unityIntent = Intent()
         unityIntent.action = Intent.ACTION_VIEW
-        unityIntent.setClassName("com.atharv.finallll", "com.unity3d.player.UnityPlayerActivity")
+        unityIntent.setClassName("com.DefaultCompany.ARHunt", "com.unity3d.player.UnityPlayerActivity")
         startActivityForResult(unityIntent, UNITY_REQUEST_CODE)
 
         return inflater.inflate(R.layout.fragment_mission_fragment, container, false)
