@@ -14,7 +14,7 @@ import retrofit2.http.Headers
 interface Heart_Featuers_Service {
 
     @GET(AppConstant.HEART_END_POINT_GALLERY)
-    suspend fun getGallery(@Header("Authorization") token: String): Response<gallery_response>
+    suspend fun Gallery(): Response<gallery_response>
 
     @GET(AppConstant.HEART_END_POINT_EVENTS)
     suspend fun events():Response<events_response>

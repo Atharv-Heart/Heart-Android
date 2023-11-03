@@ -9,18 +9,19 @@ import androidx.fragment.app.Fragment
 import com.accidentaldeveloper.heart.databinding.FragmentArFragmentBinding
 
 
-
 class ar_fragment : Fragment() {
     lateinit var binding: FragmentArFragmentBinding
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-       binding = FragmentArFragmentBinding.inflate(layoutInflater,container,false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentArFragmentBinding.inflate(layoutInflater, container, false)
         binding.im1.setOnClickListener {
             val i = Intent()
             i.action = Intent.ACTION_VIEW
-            i.setClassName("com.accidentaldeveloper.ar","com.accidentaldeveloper.ar.MainActivity")
-            i.putExtra("vinit","1")
-
-
+            i.setClassName("com.accidentaldeveloper.ar", "com.accidentaldeveloper.ar.MainActivity")
+            i.putExtra("vinit", "1")
             startActivity(i)
 
         }
@@ -28,10 +29,8 @@ class ar_fragment : Fragment() {
         binding.im2.setOnClickListener {
             val i = Intent()
             i.action = Intent.ACTION_VIEW
-            i.setClassName("com.accidentaldeveloper.ar","com.accidentaldeveloper.ar.MainActivity")
-            i.putExtra("vinit","2")
-
-
+            i.setClassName("com.accidentaldeveloper.ar", "com.accidentaldeveloper.ar.MainActivity")
+            i.putExtra("vinit", "2")
             startActivity(i)
 
         }
@@ -39,33 +38,17 @@ class ar_fragment : Fragment() {
         binding.im3.setOnClickListener {
             val i = Intent()
             i.action = Intent.ACTION_VIEW
-            i.setClassName("com.accidentaldeveloper.ar","com.accidentaldeveloper.ar.MainActivity")
-            i.putExtra("vinit","3")
-
-
+            i.setClassName("com.accidentaldeveloper.ar", "com.accidentaldeveloper.ar.MainActivity")
+            i.putExtra("vinit", "3")
             startActivity(i)
 
         }
-
-        binding.im4.setOnClickListener {
-            val i = Intent()
-            i.action = Intent.ACTION_VIEW
-            i.setClassName("com.accidentaldeveloper.ar","com.accidentaldeveloper.ar.MainActivity")
-            i.putExtra("vinit","4")
-
-
-            startActivity(i)
-
-        }
-
 
         return binding.root
     }
 
 
 }
-
-
 
 
 //com.Dini.PlanetsAR

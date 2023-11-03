@@ -11,6 +11,8 @@ class Heart_Features_Repository @Inject constructor(private val heartService:Hea
 
     suspend fun getAdvertisment() = heartService.advertisments()
 
+    suspend fun getGallery() = heartService.Gallery()
+
 
 
 
