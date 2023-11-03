@@ -50,28 +50,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ad_1" />
+                        android:src="@drawable/local_ad_2" />
 
                     <ImageView
                         android:id="@+id/ad_2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ad_2" />
+                        android:src="@drawable/local_ad_3" />
 
                     <ImageView
                         android:id="@+id/ad_3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ad_3" />
+                        android:src="@drawable/local_ad_4" />
 
                     <ImageView
                         android:id="@+id/ad_4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ad_4" />
+                        android:src="@drawable/local_ad_3" />
 
                 </ViewFlipper>
 

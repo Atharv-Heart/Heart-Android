@@ -21,8 +21,6 @@
         tools:layout="@layout/fragment_saved__events__fragments" >
         <action
             android:id="@+id/action_saved_Events_Fragments_to_all_Events_fragments"
-            app:destination="@id/all_Events_fragments"
-            app:popUpTo="@id/all_Events_fragments"
-            app:popUpToInclusive="true" />
+            app:destination="@id/all_Events_fragments" />
     </fragment>
 </navigation>
