@@ -12,7 +12,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-
         android:layout_height="match_parent">
 
         <!-- ScrollView for making the app kinda responsive -->
@@ -21,7 +20,6 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:contentDescription="scrollView"
-
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -209,6 +207,8 @@
 
 
                 </LinearLayout>
+
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

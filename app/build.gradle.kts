@@ -62,6 +62,7 @@ dependencies {
     //retorfit
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:okhttp:4.11.0")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
@@ -77,7 +78,13 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
     //picaso
-    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+    //unity ads
+    //unity Ads
+    implementation ("com.unity3d.ads:unity-ads:4.7.0")
+
+    implementation ("com.airbnb.android:lottie:6.0.1")
 
 
 }

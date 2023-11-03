@@ -17,7 +17,7 @@ class ar_fragment : Fragment() {
         binding.imageView2.setOnClickListener {
             val i = Intent()
             i.action = Intent.ACTION_VIEW
-            i.setClassName("com.atharv.finallll","com.unity3d.player.UnityPlayerActivity")
+            i.setClassName("com.DefaultCompany.ProtoTypical","com.unity3d.player.UnityPlayerActivity")
 
 
             startActivity(i)

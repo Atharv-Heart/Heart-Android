@@ -8,26 +8,42 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.heart.Gallery
+import com.accidentaldeveloper.heart.R
 import com.accidentaldeveloper.heart.Visited_Places
+import com.accidentaldeveloper.heart.adapters.ImageAdapter
 import com.accidentaldeveloper.heart.databinding.FragmentHomeBinding
 import com.accidentaldeveloper.heart.models.mascot_model.mascot_request
 import com.accidentaldeveloper.heart.viewmodel.HeartViewModel.AdvertimentViewModel
 import com.accidentaldeveloper.heart.viewmodel.Mascot_View_Model
+import com.unity3d.ads.IUnityAdsShowListener
+import com.unity3d.ads.UnityAds
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.Locale
 
 @AndroidEntryPoint
 class home_fragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
-
     private val viewmodel: Mascot_View_Model by viewModels()
     private val viewmodel_Ads: AdvertimentViewModel by viewModels()
-
     lateinit var tts: TextToSpeech
     lateinit var speak: String
     private var counter:Int = 0
+    private val imageUrls = listOf(
+        "https://res.cloudinary.com/dlfd6tfmu/image/upload/v1699005325/atharvFolder/cchgdhdbehapmifs3yhm.png",
+        "https://res.cloudinary.com/dlfd6tfmu/image/upload/v1699005284/atharvFolder/dte5inj5etf2rqlby03j.png",
+        "https://res.cloudinary.com/dlfd6tfmu/image/upload/v1699005284/atharvFolder/dte5inj5etf2rqlby03j.png",
+        "https://res.cloudinary.com/dlfd6tfmu/image/upload/v1699005284/atharvFolder/dte5inj5etf2rqlby03j.png",
+        "https://res.cloudinary.com/dlfd6tfmu/image/upload/v1699005284/atharvFolder/dte5inj5etf2rqlby03j.png",
+        "https://res.cloudinary.com/dlfd6tfmu/image/upload/v1699005284/atharvFolder/dte5inj5etf2rqlby03j.png"
+
+    )
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -35,6 +51,13 @@ class home_fragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+
+        val recyclerView = binding.NearbyPlaceRv
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        val adapter = ImageAdapter(imageUrls)
+        recyclerView.adapter = adapter
+
+
 
         //onclickListner for gallery visited
         binding.gallery.setOnClickListener {
@@ -59,9 +82,7 @@ class home_fragment : Fragment() {
         }
 
         //more coins
-        binding.morecoins.setOnClickListener {
 
-        }
 
         viewmodel.livedata.observe(viewLifecycleOwner, {
             Log.d("aajana", "onCreate: ${it}")
@@ -99,6 +120,8 @@ class home_fragment : Fragment() {
         })
         return binding.root
     }
+
+
 
 
 }
