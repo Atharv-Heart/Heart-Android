@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.accidentaldeveloper.heart.R
+import com.accidentaldeveloper.heart.models.Heart_gallery_model.gallery_response
 import com.accidentaldeveloper.heart.models.Heart_gallery_model.gallery_responseItem
 import com.bumptech.glide.Glide
 

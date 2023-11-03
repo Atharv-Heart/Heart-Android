@@ -12,21 +12,27 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class Gallery : AppCompatActivity() {
-    private val galleryViewModel:GalleryViewModel by viewModels()
+    private val galleryViewModel: GalleryViewModel by viewModels()
     private lateinit var recyclerView: RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
+
         // Find the RecyclerView in your layout
         recyclerView = findViewById(R.id.gallery_rv)
 
         // Set up the StaggeredGridLayoutManager with your desired span count
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.layoutManager = layoutManager
-        galleryViewModel.liveData.observe(this,{galleryItems->
+
+        // Observe LiveData from GalleryViewModel
+        galleryViewModel.liveData.observe(this) { galleryItems ->
+            // Create a GalleryAdapter with the observed galleryItems and set it as the RecyclerView's adapter
             val adapter = GalleryAdapter(galleryItems)
             recyclerView.adapter = adapter
-            Log.d("vinit", "onCreate: ${galleryItems}")
-        })
+            // Log the gallery items for debugging
+            Log.d("vinit", "onCreate: $galleryItems")
+        }
     }
 }

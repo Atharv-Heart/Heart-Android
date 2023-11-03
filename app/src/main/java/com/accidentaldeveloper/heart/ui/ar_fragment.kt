@@ -17,7 +17,7 @@ class ar_fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentArFragmentBinding.inflate(layoutInflater, container, false)
-        binding.im1.setOnClickListener {
+        /*binding.im1.setOnClickListener {
             val i = Intent()
             i.action = Intent.ACTION_VIEW
             i.setClassName("com.accidentaldeveloper.ar", "com.accidentaldeveloper.ar.MainActivity")
@@ -42,7 +42,7 @@ class ar_fragment : Fragment() {
             i.putExtra("vinit", "3")
             startActivity(i)
 
-        }
+        }*/
 
         binding.imageView2.setOnClickListener {
             val unityIntent = Intent()
