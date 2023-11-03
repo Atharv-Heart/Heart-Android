@@ -38,6 +38,7 @@ class home_fragment : Fragment() {
         "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.Urjyzf7GBJobBFPkDNCEQQHaEg%26pid%3DApi&sp=1699015396T501729de04ec3b1bcbc716a1a4dab420e410eadbf2c633cf1140712a5d343f5f",
         "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.jUy3sDfVdykhATRUq14cVAHaE8%26pid%3DApi&sp=1699015425T5461804bc0dac2733fb4a7762a4f5cae9f4846dbf930dc8d466c60fe4fd3bdfb",
         "https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.yOrG-QZR1Yg7270dK90MhgHaEK%26pid%3DApi&sp=1699015460T8bc6e394a81a799d410fa91b0e6cbed2cdc5bd74ed3a6e036c96ce96e1c631b9",
+        "https://res.cloudinary.com/dlfd6tfmu/image/upload/v1699042654/atharvDealsImagesSample/images_hseflm.jpg"
 
 
     )

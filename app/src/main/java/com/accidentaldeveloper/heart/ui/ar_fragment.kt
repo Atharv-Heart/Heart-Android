@@ -44,6 +44,13 @@ class ar_fragment : Fragment() {
 
         }
 
+        binding.imageView2.setOnClickListener {
+            val unityIntent = Intent()
+            unityIntent.action = Intent.ACTION_VIEW
+            unityIntent.setClassName("com.HeART.ARRestore", "com.unity3d.player.UnityPlayerActivity")
+            startActivity(unityIntent)
+        }
+
         return binding.root
     }
 
